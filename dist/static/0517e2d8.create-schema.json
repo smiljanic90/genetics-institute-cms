@@ -1,0 +1,2509 @@
+[
+  {
+    "options": {
+      "languageFilter": true
+    },
+    "fields": [
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "localeString",
+        "title": "Naslov"
+      },
+      {
+        "options": {
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "excerpt",
+        "type": "localeText",
+        "title": "Kratak opis"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "name": "body",
+        "type": "localeBlockContent",
+        "title": "Sadržaj"
+      },
+      {
+        "options": {
+          "filter": "\"news\" in categoryTypes"
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "category"
+          }
+        ],
+        "name": "category",
+        "type": "reference",
+        "title": "Kategorija"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "date",
+        "type": "datetime",
+        "title": "Datum"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "image",
+        "type": "image",
+        "title": "Naslovna slika"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean",
+        "title": "Istaknuto"
+      },
+      {
+        "of": [
+          {
+            "to": [
+              {
+                "options": {
+                  "languageFilter": true
+                },
+                "type": "news"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to novosti"
+          }
+        ],
+        "name": "relatedNews",
+        "type": "array",
+        "title": "Povezane vijesti"
+      }
+    ],
+    "name": "news",
+    "type": "document",
+    "title": "Novosti"
+  },
+  {
+    "options": {
+      "languageFilter": true
+    },
+    "fields": [
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "localeString",
+        "title": "Naziv centra"
+      },
+      {
+        "options": {
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "excerpt",
+        "type": "localeText",
+        "title": "Kratak opis"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "name": "description",
+        "type": "localeBlockContent",
+        "title": "Detaljan opis"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "image",
+        "type": "image",
+        "title": "Naslovna slika"
+      },
+      {
+        "of": [
+          {
+            "to": [
+              {
+                "options": {
+                  "languageFilter": true
+                },
+                "type": "center"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to centar"
+          }
+        ],
+        "name": "relatedCenters",
+        "type": "array",
+        "title": "Povezani centri"
+      }
+    ],
+    "name": "center",
+    "type": "document",
+    "title": "Centar"
+  },
+  {
+    "options": {
+      "languageFilter": true
+    },
+    "fields": [
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "localeString",
+        "title": "Naslov"
+      },
+      {
+        "options": {
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "excerpt",
+        "type": "localeText",
+        "title": "Kratak opis"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "name": "body",
+        "type": "localeBlockContent",
+        "title": "Detaljan opis"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Istraživanje",
+              "value": "istraživanje"
+            },
+            {
+              "title": "Očuvanje",
+              "value": "očuvanje"
+            },
+            {
+              "title": "Edukacija",
+              "value": "edukacija"
+            },
+            {
+              "title": "Razvoj",
+              "value": "razvoj"
+            }
+          ]
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "valid",
+                "constraint": [
+                  "istraživanje",
+                  "očuvanje",
+                  "edukacija",
+                  "razvoj"
+                ]
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "category",
+        "type": "string",
+        "title": "Kategorija"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Aktivno",
+              "value": "aktivno"
+            },
+            {
+              "title": "Završeno",
+              "value": "završeno"
+            },
+            {
+              "title": "Planirano",
+              "value": "planirano"
+            }
+          ],
+          "layout": "radio"
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "valid",
+                "constraint": [
+                  "aktivno",
+                  "završeno",
+                  "planirano"
+                ]
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "min",
+                "constraint": 1900
+              },
+              {
+                "flag": "max",
+                "constraint": 2026
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "year",
+        "type": "number",
+        "title": "Godina"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "image",
+        "type": "image",
+        "title": "Naslovna slika"
+      },
+      {
+        "of": [
+          {
+            "options": {
+              "hotspot": true
+            },
+            "type": "image"
+          }
+        ],
+        "name": "gallery",
+        "type": "array",
+        "title": "Galerija slika"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "tags",
+        "type": "array",
+        "title": "Tagovi"
+      },
+      {
+        "of": [
+          {
+            "to": [
+              {
+                "options": {
+                  "languageFilter": true
+                },
+                "type": "project"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to projekti"
+          }
+        ],
+        "name": "relatedProjects",
+        "type": "array",
+        "title": "Povezani projekti"
+      }
+    ],
+    "name": "project",
+    "type": "document",
+    "title": "Projekti"
+  },
+  {
+    "options": {
+      "languageFilter": true
+    },
+    "fields": [
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "localeString",
+        "title": "Naslov"
+      },
+      {
+        "options": {
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "name": "description",
+        "type": "localeText",
+        "title": "Opis"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Centri",
+              "value": "centri"
+            },
+            {
+              "title": "Projekti",
+              "value": "projekti"
+            },
+            {
+              "title": "Događaji",
+              "value": "dogadjaji"
+            },
+            {
+              "title": "Priroda",
+              "value": "priroda"
+            },
+            {
+              "title": "Istraživanja",
+              "value": "istrazivanja"
+            }
+          ]
+        },
+        "name": "category",
+        "type": "string",
+        "title": "Kategorija"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "min",
+                "constraint": 1
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "of": [
+          {
+            "type": "galleryImage",
+            "title": "Galerijska slika"
+          }
+        ],
+        "name": "images",
+        "type": "array",
+        "title": "Slike"
+      },
+      {
+        "name": "date",
+        "type": "datetime",
+        "title": "Datum"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "tags",
+        "type": "array",
+        "title": "Tagovi"
+      }
+    ],
+    "name": "galleryAlbum",
+    "type": "document",
+    "title": "Galerija slika"
+  },
+  {
+    "options": {
+      "languageFilter": true
+    },
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Koristi se za identifikaciju u CMS-u (npr. \"novosti-badge\", \"prazno-naslov\")",
+        "name": "name",
+        "type": "string",
+        "title": "Interni naziv"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "text",
+        "type": "localeString",
+        "title": "Tekst (podržava više jezika)"
+      }
+    ],
+    "name": "label",
+    "type": "document",
+    "title": "Oznaka (Label)"
+  },
+  {
+    "options": {
+      "languageFilter": true
+    },
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Mora odgovarati vrednosti u sadržaju. Npr. za novosti: vesti, dogadjaji, israzivanja. Za projekte status: aktivno, zavrseno, planirano.",
+        "name": "slug",
+        "type": "string",
+        "title": "Slug (identifikator)"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "name",
+        "type": "localeString",
+        "title": "Naziv (prikazuje se korisniku)"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Novosti",
+              "value": "news"
+            },
+            {
+              "title": "Projekti - kategorija",
+              "value": "project"
+            },
+            {
+              "title": "Projekti - status",
+              "value": "status"
+            },
+            {
+              "title": "Galerija",
+              "value": "gallery"
+            }
+          ],
+          "layout": "grid"
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "valid",
+                "constraint": [
+                  "news",
+                  "project",
+                  "status",
+                  "gallery"
+                ]
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 1
+              }
+            ],
+            "level": "error",
+            "message": "Odaberi bar jedan tip kategorije"
+          }
+        ],
+        "description": "Kategorija može pripadati više tipova. Npr. \"Vesti\" može biti i za novosti i za galeriju.",
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "categoryTypes",
+        "type": "array",
+        "title": "Tipovi kategorije"
+      }
+    ],
+    "name": "category",
+    "type": "document",
+    "title": "Kategorija"
+  },
+  {
+    "options": {
+      "languageFilter": true
+    },
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Koristi se za identifikaciju (npr. \"pogledaj-sve\", \"saznaj-vise\")",
+        "name": "name",
+        "type": "string",
+        "title": "Interni naziv"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "text",
+        "type": "localeString",
+        "title": "Tekst dugmeta (podržava više jezika)"
+      }
+    ],
+    "name": "button",
+    "type": "document",
+    "title": "Dugme"
+  },
+  {
+    "options": {
+      "languageFilter": true
+    },
+    "fields": [
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "name": "name",
+        "type": "localeString",
+        "title": "Puni naziv"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "name": "shortName",
+        "type": "localeString",
+        "title": "Skraćeni naziv"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "name": "description",
+        "type": "localeText",
+        "title": "Opis"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "url",
+        "type": "url",
+        "title": "URL sajta"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "logo",
+        "type": "image"
+      },
+      {
+        "fields": [
+          {
+            "of": [
+              {
+                "type": "navItem",
+                "title": "Stavka navigacije"
+              }
+            ],
+            "name": "items",
+            "type": "array",
+            "title": "Stavke navigacije"
+          }
+        ],
+        "name": "navbar",
+        "type": "object",
+        "title": "Navigacija (navbar)"
+      },
+      {
+        "fields": [
+          {
+            "description": "Linkovi u koloni Institut",
+            "name": "institut",
+            "type": "footerSection"
+          },
+          {
+            "description": "Linkovi u koloni Centri",
+            "name": "centri",
+            "type": "footerSection"
+          },
+          {
+            "description": "Linkovi u koloni Resursi",
+            "name": "resursi",
+            "type": "footerSection"
+          }
+        ],
+        "name": "footer",
+        "type": "object",
+        "title": "Futer"
+      },
+      {
+        "fields": [
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "facebook",
+            "type": "url"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "twitter",
+            "type": "url"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "instagram",
+            "type": "url"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "linkedin",
+            "type": "url",
+            "title": "LinkedIn"
+          }
+        ],
+        "name": "social",
+        "type": "object",
+        "title": "Društvene mreže"
+      },
+      {
+        "fields": [
+          {
+            "name": "email",
+            "type": "string",
+            "title": "E-mail"
+          },
+          {
+            "name": "phone",
+            "type": "string",
+            "title": "Telefon"
+          },
+          {
+            "name": "address",
+            "type": "string",
+            "title": "Adresa"
+          }
+        ],
+        "name": "contact",
+        "type": "object",
+        "title": "Kontakt"
+      }
+    ],
+    "name": "siteSettings",
+    "type": "document",
+    "title": "Podešavanja sajta"
+  },
+  {
+    "options": {
+      "languageFilter": true
+    },
+    "fields": [
+      {
+        "description": "Redoslijed sekcija na početnoj stranici. Možete dodati novu sekciju, ukloniti ili promijeniti redoslijed. Za svaku sekciju možete postaviti naslov, opis i (za Projekti/Novosti/Centri/Galerija/Partneri) šta tačno prikazati.",
+        "of": [
+          {
+            "type": "homeSection",
+            "title": "Sekcija početne strane"
+          }
+        ],
+        "name": "sections",
+        "type": "array",
+        "title": "Sekcije"
+      }
+    ],
+    "name": "homePage",
+    "type": "document",
+    "title": "Početna stranica"
+  },
+  {
+    "options": {
+      "languageFilter": true
+    },
+    "fields": [
+      {
+        "description": "Oznaka za naslov (npr. \"Novosti\")",
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "titleLabel",
+        "type": "reference",
+        "title": "Naslov stranice"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "name": "description",
+        "type": "localeText",
+        "title": "Opis stranice"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "emptyTitleLabel",
+        "type": "reference",
+        "title": "Naslov kada nema rezultata"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "emptyDescriptionLabel",
+        "type": "reference",
+        "title": "Opis kada nema rezultata"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "button"
+          }
+        ],
+        "name": "readMoreButton",
+        "type": "reference",
+        "title": "Dugme \"Pročitaj više\" (istaknuta vijest)"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "button"
+          }
+        ],
+        "name": "learnMoreButton",
+        "type": "reference",
+        "title": "Dugme \"Saznaj više\" (kartice u listi)"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "button"
+          }
+        ],
+        "name": "backButton",
+        "type": "reference",
+        "title": "Dugme \"Nazad\""
+      },
+      {
+        "filter": "\"news\" in categoryTypes",
+        "description": "Odaberi koje kategorije prikazati u filteru. Slug mora odgovarati kategorijama u novostima.",
+        "of": [
+          {
+            "to": [
+              {
+                "options": {
+                  "languageFilter": true
+                },
+                "type": "category"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to kategorija"
+          }
+        ],
+        "name": "categories",
+        "type": "array",
+        "title": "Kategorije za filter"
+      }
+    ],
+    "name": "newsListPage",
+    "type": "document",
+    "title": "Stranica: Novosti"
+  },
+  {
+    "options": {
+      "languageFilter": true
+    },
+    "fields": [
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "titleLabel",
+        "type": "reference",
+        "title": "Naslov stranice"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "name": "description",
+        "type": "localeText",
+        "title": "Opis stranice"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "button"
+          }
+        ],
+        "name": "learnMoreButton",
+        "type": "reference",
+        "title": "Dugme \"Saznaj više\""
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "button"
+          }
+        ],
+        "name": "backButton",
+        "type": "reference",
+        "title": "Dugme \"Nazad\""
+      }
+    ],
+    "name": "centersListPage",
+    "type": "document",
+    "title": "Stranica: Centri"
+  },
+  {
+    "options": {
+      "languageFilter": true
+    },
+    "fields": [
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "titleLabel",
+        "type": "reference",
+        "title": "Naslov stranice"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "name": "description",
+        "type": "localeText",
+        "title": "Opis stranice"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "searchPlaceholderLabel",
+        "type": "reference",
+        "title": "Placeholder za pretragu"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "categoryFilterLabel",
+        "type": "reference",
+        "title": "Oznaka za filter kategorija"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "statusFilterLabel",
+        "type": "reference",
+        "title": "Oznaka za filter statusa"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "emptyTitleLabel",
+        "type": "reference",
+        "title": "Naslov kada nema rezultata"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "emptyDescriptionLabel",
+        "type": "reference",
+        "title": "Opis kada nema rezultata"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "button"
+          }
+        ],
+        "name": "detailsButton",
+        "type": "reference",
+        "title": "Dugme \"Detalji\""
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "button"
+          }
+        ],
+        "name": "backButton",
+        "type": "reference",
+        "title": "Dugme \"Nazad\""
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "detailCategoryLabel",
+        "type": "reference",
+        "title": "Oznaka \"Kategorija\" (detalj)"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "detailStatusLabel",
+        "type": "reference",
+        "title": "Oznaka \"Status\" (detalj)"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "detailYearLabel",
+        "type": "reference",
+        "title": "Oznaka \"Godina\" (detalj)"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "detailTagsLabel",
+        "type": "reference",
+        "title": "Oznaka \"Tagovi\" (detalj)"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "detailRelatedLabel",
+        "type": "reference",
+        "title": "Oznaka \"Povezani projekti\" (detalj)"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "button"
+          }
+        ],
+        "name": "learnMoreButton",
+        "type": "reference",
+        "title": "Dugme \"Saznaj više\" (detalj)"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "allFilterLabel",
+        "type": "reference",
+        "title": "Oznaka za \"Sve\" u filterima"
+      },
+      {
+        "filter": "\"project\" in categoryTypes",
+        "of": [
+          {
+            "to": [
+              {
+                "options": {
+                  "languageFilter": true
+                },
+                "type": "category"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to kategorija"
+          }
+        ],
+        "name": "categoryCategories",
+        "type": "array",
+        "title": "Kategorije projekata (istraživanje, očuvanje, itd.)"
+      },
+      {
+        "filter": "\"status\" in categoryTypes",
+        "of": [
+          {
+            "to": [
+              {
+                "options": {
+                  "languageFilter": true
+                },
+                "type": "category"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to kategorija"
+          }
+        ],
+        "name": "statusCategories",
+        "type": "array",
+        "title": "Statusi (aktivno, završeno, planirano)"
+      }
+    ],
+    "name": "projectsListPage",
+    "type": "document",
+    "title": "Stranica: Projekti"
+  },
+  {
+    "options": {
+      "languageFilter": true
+    },
+    "fields": [
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "titleLabel",
+        "type": "reference",
+        "title": "Naslov stranice"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "name": "description",
+        "type": "localeText",
+        "title": "Opis stranice"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "emptyTitleLabel",
+        "type": "reference",
+        "title": "Naslov kada nema rezultata"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "emptyDescriptionLabel",
+        "type": "reference",
+        "title": "Opis kada nema rezultata"
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "button"
+          }
+        ],
+        "name": "viewAlbumButton",
+        "type": "reference",
+        "title": "Dugme \"Pogledaj album\""
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "button"
+          }
+        ],
+        "name": "backButton",
+        "type": "reference",
+        "title": "Dugme \"Nazad\""
+      },
+      {
+        "filter": "\"gallery\" in categoryTypes",
+        "of": [
+          {
+            "to": [
+              {
+                "options": {
+                  "languageFilter": true
+                },
+                "type": "category"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to kategorija"
+          }
+        ],
+        "name": "categories",
+        "type": "array",
+        "title": "Kategorije za filter"
+      }
+    ],
+    "name": "galleryListPage",
+    "type": "document",
+    "title": "Stranica: Galerija"
+  },
+  {
+    "of": [
+      {
+        "marks": {
+          "annotations": [
+            {
+              "i18nTitleKey": "inputs.portable-text.annotation.link",
+              "options": {
+                "modal": {
+                  "type": "popover"
+                }
+              },
+              "fields": [
+                {
+                  "validation": [
+                    {
+                      "rules": [
+                        {
+                          "flag": "uri",
+                          "constraint": {
+                            "options": {
+                              "scheme": [
+                                "/^http$/",
+                                "/^https$/",
+                                "/^tel$/",
+                                "/^mailto$/"
+                              ],
+                              "allowRelative": true,
+                              "relativeOnly": false,
+                              "allowCredentials": false
+                            }
+                          }
+                        }
+                      ],
+                      "level": "error"
+                    }
+                  ],
+                  "description": "A valid web, email, phone, or relative link.",
+                  "name": "href",
+                  "type": "url",
+                  "title": "Link"
+                }
+              ],
+              "name": "link",
+              "type": "object"
+            }
+          ],
+          "decorators": [
+            {
+              "value": "strong",
+              "title": "Strong"
+            },
+            {
+              "value": "em",
+              "title": "Italic"
+            },
+            {
+              "value": "code",
+              "title": "Code"
+            },
+            {
+              "value": "underline",
+              "title": "Underline"
+            },
+            {
+              "value": "strike-through",
+              "title": "Strike"
+            }
+          ]
+        },
+        "lists": [
+          {
+            "value": "bullet",
+            "title": "Bulleted list"
+          },
+          {
+            "value": "number",
+            "title": "Numbered list"
+          }
+        ],
+        "styles": [
+          {
+            "value": "normal",
+            "title": "Normal"
+          },
+          {
+            "value": "h1",
+            "title": "Heading 1"
+          },
+          {
+            "value": "h2",
+            "title": "Heading 2"
+          },
+          {
+            "value": "h3",
+            "title": "Heading 3"
+          },
+          {
+            "value": "h4",
+            "title": "Heading 4"
+          },
+          {
+            "value": "h5",
+            "title": "Heading 5"
+          },
+          {
+            "value": "h6",
+            "title": "Heading 6"
+          },
+          {
+            "value": "blockquote",
+            "title": "Quote"
+          }
+        ],
+        "of": [],
+        "type": "block"
+      },
+      {
+        "type": "figure",
+        "title": "Slika sa opisom"
+      }
+    ],
+    "name": "blockContent",
+    "type": "array",
+    "title": "Sadržaj"
+  },
+  {
+    "fields": [
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "image",
+        "type": "image",
+        "title": "Slika"
+      },
+      {
+        "name": "alt",
+        "type": "string",
+        "title": "Alt tekst"
+      },
+      {
+        "name": "caption",
+        "type": "string",
+        "title": "Opis"
+      }
+    ],
+    "name": "figure",
+    "type": "object",
+    "title": "Slika sa opisom"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 60
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "metaTitle",
+        "type": "string",
+        "title": "Meta naslov"
+      },
+      {
+        "rows": 3,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 160
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "metaDescription",
+        "type": "text",
+        "title": "Meta opis"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "ogImage",
+        "type": "image",
+        "title": "Open Graph slika"
+      }
+    ],
+    "name": "seo",
+    "type": "object",
+    "title": "SEO"
+  },
+  {
+    "fields": [
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "image",
+        "type": "image",
+        "title": "Slika"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "name": "alt",
+        "type": "localeString",
+        "title": "Alt tekst"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "name": "caption",
+        "type": "localeString",
+        "title": "Opis"
+      }
+    ],
+    "name": "galleryImage",
+    "type": "object",
+    "title": "Galerijska slika"
+  },
+  {
+    "options": {
+      "collapsible": true,
+      "collapsed": false
+    },
+    "fields": [
+      {
+        "name": "en",
+        "type": "string",
+        "title": "English"
+      },
+      {
+        "name": "sr",
+        "type": "string",
+        "title": "Srpski (latinica)"
+      },
+      {
+        "name": "srCyr",
+        "type": "string",
+        "title": "Српски (ћирилица)"
+      }
+    ],
+    "name": "localeString",
+    "type": "object",
+    "title": "Tekst (jezik)"
+  },
+  {
+    "options": {
+      "collapsible": true,
+      "collapsed": false
+    },
+    "fields": [
+      {
+        "rows": 3,
+        "name": "en",
+        "type": "text",
+        "title": "English"
+      },
+      {
+        "rows": 3,
+        "name": "sr",
+        "type": "text",
+        "title": "Srpski (latinica)"
+      },
+      {
+        "rows": 3,
+        "name": "srCyr",
+        "type": "text",
+        "title": "Српски (ћирилица)"
+      }
+    ],
+    "name": "localeText",
+    "type": "object",
+    "title": "Dugi tekst (jezik)"
+  },
+  {
+    "options": {
+      "collapsible": true,
+      "collapsed": false
+    },
+    "fields": [
+      {
+        "name": "en",
+        "type": "blockContent",
+        "title": "English"
+      },
+      {
+        "name": "sr",
+        "type": "blockContent",
+        "title": "Srpski (latinica)"
+      },
+      {
+        "name": "srCyr",
+        "type": "blockContent",
+        "title": "Српски (ћирилица)"
+      }
+    ],
+    "name": "localeBlockContent",
+    "type": "object",
+    "title": "Blok sadržaj (jezik)"
+  },
+  {
+    "fields": [
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "name": "name",
+        "type": "localeString",
+        "title": "Naziv"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "logo",
+        "type": "image"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "url",
+        "type": "url",
+        "title": "Link (opciono)"
+      }
+    ],
+    "name": "partner",
+    "type": "object"
+  },
+  {
+    "fields": [
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Hero (naslovnica)",
+              "value": "hero"
+            },
+            {
+              "title": "O nama",
+              "value": "about"
+            },
+            {
+              "title": "Naši partneri",
+              "value": "partners"
+            },
+            {
+              "title": "Naši centri",
+              "value": "centers"
+            },
+            {
+              "title": "Projekti",
+              "value": "projects"
+            },
+            {
+              "title": "Novosti",
+              "value": "news"
+            },
+            {
+              "title": "Galerija",
+              "value": "gallery"
+            },
+            {
+              "title": "Kontakt",
+              "value": "contact"
+            }
+          ]
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "valid",
+                "constraint": [
+                  "hero",
+                  "about",
+                  "partners",
+                  "centers",
+                  "projects",
+                  "news",
+                  "gallery",
+                  "contact"
+                ]
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "sectionType",
+        "type": "string",
+        "title": "Tip sekcije"
+      },
+      {
+        "initialValue": true,
+        "name": "enabled",
+        "type": "boolean",
+        "title": "Prikaži sekciju"
+      },
+      {
+        "description": "Mala oznaka iznad naslova (npr. \"Novosti\", \"Centri\"). Odaberi iz liste oznaka.",
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "badgeLabel",
+        "type": "reference",
+        "title": "Oznaka sekcije (badge)"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "description": "Ako ostavite prazno, koristi se podrazumijevani naslov.",
+        "name": "title",
+        "type": "localeString",
+        "title": "Naslov sekcije (opciono)"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "name": "description",
+        "type": "localeText",
+        "title": "Opis sekcije (opciono)"
+      },
+      {
+        "description": "Dugme za link na listu (npr. \"Pogledaj sve\").",
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "button"
+          }
+        ],
+        "name": "buttonLabel",
+        "type": "reference",
+        "title": "Dugme \"Pogledaj sve\""
+      },
+      {
+        "description": "Dugme na karticama (opciono). Ako prazno, koristi \"Pogledaj sve\" dugme.",
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "button"
+          }
+        ],
+        "name": "readMoreButton",
+        "type": "reference",
+        "title": "Dugme \"Pročitaj više\" / \"Saznaj više\""
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "hidden": "conditional",
+        "name": "partnersHeadingLabel",
+        "type": "reference",
+        "title": "Naslov \"Naši partneri\" (samo za sekciju O nama)"
+      },
+      {
+        "description": "Ako odaberete projekte, prikazuju se samo oni. Ako ne odaberete nijedan, prikazuju se zadnja 4 projekta.",
+        "of": [
+          {
+            "to": [
+              {
+                "options": {
+                  "languageFilter": true
+                },
+                "type": "project"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to projekti"
+          }
+        ],
+        "hidden": "conditional",
+        "name": "featuredProjects",
+        "type": "array",
+        "title": "Odabrani projekti"
+      },
+      {
+        "initialValue": 4,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "min",
+                "constraint": 1
+              },
+              {
+                "flag": "max",
+                "constraint": 12
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "hidden": "conditional",
+        "name": "projectsLimit",
+        "type": "number",
+        "title": "Broj projekata (kad nisu odabrani)"
+      },
+      {
+        "description": "Ako odaberete novosti, prikazuju se one. Ako ne odaberete nijednu, prikazuju se zadnje novosti.",
+        "of": [
+          {
+            "to": [
+              {
+                "options": {
+                  "languageFilter": true
+                },
+                "type": "news"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to novosti"
+          }
+        ],
+        "hidden": "conditional",
+        "name": "featuredNews",
+        "type": "array",
+        "title": "Odabrane novosti"
+      },
+      {
+        "initialValue": 3,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "min",
+                "constraint": 1
+              },
+              {
+                "flag": "max",
+                "constraint": 10
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "hidden": "conditional",
+        "name": "newsLimit",
+        "type": "number",
+        "title": "Broj novosti (kad nisu odabrane)"
+      },
+      {
+        "description": "Ako odaberete centri, prikazuju se samo oni (redoslijed važi). Ako ne odaberete nijedan, prikazuju se svi centri.",
+        "of": [
+          {
+            "to": [
+              {
+                "options": {
+                  "languageFilter": true
+                },
+                "type": "center"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to centar"
+          }
+        ],
+        "hidden": "conditional",
+        "name": "featuredCenters",
+        "type": "array",
+        "title": "Odabrani centri"
+      },
+      {
+        "initialValue": 5,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "min",
+                "constraint": 1
+              },
+              {
+                "flag": "max",
+                "constraint": 20
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "hidden": "conditional",
+        "name": "centersLimit",
+        "type": "number",
+        "title": "Broj centara (kad nisu odabrani)"
+      },
+      {
+        "description": "Ako odaberete albume, prikazuju se oni. Ako ne odaberete nijedan, prikazuju se zadnji albumi.",
+        "of": [
+          {
+            "to": [
+              {
+                "options": {
+                  "languageFilter": true
+                },
+                "type": "galleryAlbum"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to galerija slika"
+          }
+        ],
+        "hidden": "conditional",
+        "name": "featuredAlbums",
+        "type": "array",
+        "title": "Odabrani albumi"
+      },
+      {
+        "initialValue": 4,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "min",
+                "constraint": 1
+              },
+              {
+                "flag": "max",
+                "constraint": 12
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "hidden": "conditional",
+        "name": "galleryLimit",
+        "type": "number",
+        "title": "Broj albuma (kad nisu odabrani)"
+      },
+      {
+        "of": [
+          {
+            "type": "partner"
+          }
+        ],
+        "hidden": "conditional",
+        "name": "partners",
+        "type": "array",
+        "title": "Lista partnera"
+      }
+    ],
+    "name": "homeSection",
+    "type": "object",
+    "title": "Sekcija početne strane"
+  },
+  {
+    "fields": [
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "label",
+        "type": "localeString",
+        "title": "Naziv"
+      },
+      {
+        "description": "Unutrašnja putanja bez jezika (npr. /o-institutu, /centri, /projekti). Za eksterni link koristite polje za eksterni URL.",
+        "hidden": "conditional",
+        "name": "path",
+        "type": "string",
+        "title": "Putanja"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Unutrašnji (putanja)",
+              "value": "internal"
+            },
+            {
+              "title": "Eksterni (URL)",
+              "value": "external"
+            }
+          ],
+          "layout": "radio"
+        },
+        "initialValue": "internal",
+        "name": "linkType",
+        "type": "string",
+        "title": "Tip linka"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "hidden": "conditional",
+        "name": "externalUrl",
+        "type": "url",
+        "title": "Eksterni URL"
+      }
+    ],
+    "name": "navItem",
+    "type": "object",
+    "title": "Stavka navigacije"
+  },
+  {
+    "fields": [
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "label",
+        "type": "localeString",
+        "title": "Naziv"
+      },
+      {
+        "description": "Unutrašnja putanja bez jezika (npr. /o-institutu, /centri).",
+        "hidden": "conditional",
+        "name": "path",
+        "type": "string",
+        "title": "Putanja"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Unutrašnji (putanja)",
+              "value": "internal"
+            },
+            {
+              "title": "Eksterni (URL)",
+              "value": "external"
+            }
+          ],
+          "layout": "radio"
+        },
+        "initialValue": "internal",
+        "name": "linkType",
+        "type": "string",
+        "title": "Tip linka"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "hidden": "conditional",
+        "name": "externalUrl",
+        "type": "url",
+        "title": "Eksterni URL"
+      }
+    ],
+    "name": "footerLink",
+    "type": "object",
+    "title": "Link u futeru"
+  },
+  {
+    "fields": [
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "localeString",
+        "title": "Naslov sekcije"
+      },
+      {
+        "of": [
+          {
+            "type": "footerLink",
+            "title": "Link u futeru"
+          }
+        ],
+        "name": "links",
+        "type": "array",
+        "title": "Linkovi"
+      }
+    ],
+    "name": "footerSection",
+    "type": "object",
+    "title": "Sekcija futera"
+  }
+]

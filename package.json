@@ -1,0 +1,23 @@
+{
+  "name": "genetics-institute-cms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@sanity/language-filter": "^4.0.6",
+    "@sanity/vision": "^5.7.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sanity": "^5.7.0",
+    "styled-components": "^6.3.8"
+  }
+}
