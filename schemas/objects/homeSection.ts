@@ -40,7 +40,8 @@ export const homeSection = {
     {
       name: 'badgeLabel',
       title: 'Oznaka sekcije (badge)',
-      description: 'Mala oznaka iznad naslova (npr. "Novosti", "Centri"). Odaberi iz liste oznaka.',
+      description:
+        'Mala oznaka iznad naslova (npr. "Novosti", "Centri"). Odaberi iz liste oznaka.',
       type: 'reference',
       to: [{ type: 'label' }],
       group: 'content',
@@ -69,16 +70,62 @@ export const homeSection = {
     {
       name: 'readMoreButton',
       title: 'Dugme "Pročitaj više" / "Saznaj više"',
-      description: 'Dugme na karticama (opciono). Ako prazno, koristi "Pogledaj sve" dugme.',
+      description:
+        'Dugme na karticama (opciono). Ako prazno, koristi "Pogledaj sve" dugme.',
       type: 'reference',
       to: [{ type: 'button' }],
       group: 'content',
     },
     {
-      name: 'partnersHeadingLabel',
-      title: 'Naslov "Naši partneri" (samo za sekciju O nama)',
-      type: 'reference',
-      to: [{ type: 'label' }],
+      name: 'heroStats',
+      title: 'Statistike (samo za Hero sekciju)',
+      description:
+        'Brojevi i opisi ispod hero sadržaja (npr. 30+ Godina tradicije)',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            { name: 'number', title: 'Broj', type: 'string' },
+            {
+              name: 'label',
+              title: 'Oznaka',
+              type: 'reference',
+              to: [{ type: 'label' }],
+            },
+          ],
+          preview: {
+            select: { number: 'number' },
+            prepare: ({ number }: { number?: string }) => ({
+              title: number || 'Stat',
+            }),
+          },
+        },
+      ],
+      group: 'content',
+      hidden: ({ parent }: { parent?: { sectionType?: string } }) =>
+        parent?.sectionType !== 'hero',
+    },
+    {
+      name: 'selectedOverviewCardSlugs',
+      title: 'Odabrane kartice (samo za sekciju O nama)',
+      description:
+        'Odaberi koje kartice sa Stranice O Institutu prikazati i u kojem redoslijedu. Sadržaj (naslov, opis) dolazi iz tih kartica.',
+      type: 'array',
+      of: [
+        {
+          type: 'string',
+          options: {
+            list: [
+              { title: 'Misija i Vizija', value: 'mission' },
+              { title: 'Istorijat', value: 'history' },
+              { title: 'Tim', value: 'team' },
+              { title: 'Partneri', value: 'partners' },
+            ],
+            layout: 'dropdown',
+          },
+        },
+      ],
       group: 'content',
       hidden: ({ parent }: { parent?: { sectionType?: string } }) =>
         parent?.sectionType !== 'about',
@@ -222,7 +269,12 @@ export const homeSection = {
         contact: 'Kontakt',
       };
       const title =
-        titleSr || titleSrCyr || titleEn || labels[type || ''] || type || 'Sekcija';
+        titleSr ||
+        titleSrCyr ||
+        titleEn ||
+        labels[type || ''] ||
+        type ||
+        'Sekcija';
       return {
         title,
         subtitle: enabled === false ? '(skriveno)' : labels[type || ''],

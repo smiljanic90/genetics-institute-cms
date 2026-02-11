@@ -74,28 +74,10 @@ export const project = {
       validation: (Rule: any) => Rule.required(),
     },
     {
-      name: 'year',
-      title: 'Godina',
-      type: 'number',
-      validation: (Rule: any) => Rule.min(1900).max(new Date().getFullYear()),
-    },
-    {
       name: 'image',
       title: 'Naslovna slika',
       type: 'image',
       options: { hotspot: true },
-    },
-    {
-      name: 'gallery',
-      title: 'Galerija slika',
-      type: 'array',
-      of: [{ type: 'image', options: { hotspot: true } }],
-    },
-    {
-      name: 'tags',
-      title: 'Tagovi',
-      type: 'array',
-      of: [{ type: 'string' }],
     },
     {
       name: 'relatedProjects',

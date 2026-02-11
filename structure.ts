@@ -55,6 +55,20 @@ export const structure: StructureResolver = (S) =>
             .schemaType('galleryListPage')
             .documentId('galleryListPage'),
         ),
+      S.listItem()
+        .id('aboutPage')
+        .schemaType('aboutPage')
+        .title('Stranica: O Institutu')
+        .child(
+          S.document().schemaType('aboutPage').documentId('aboutPage'),
+        ),
+      S.listItem()
+        .id('contactPage')
+        .schemaType('contactPage')
+        .title('Stranica: Kontakt')
+        .child(
+          S.document().schemaType('contactPage').documentId('contactPage'),
+        ),
       S.divider(),
       // Reusable labels, categories, buttons
       S.documentTypeListItem('label').title('Oznake (Labels)'),

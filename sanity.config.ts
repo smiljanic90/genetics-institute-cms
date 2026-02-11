@@ -16,6 +16,8 @@ const SINGLETON_IDS = [
   'centersListPage',
   'projectsListPage',
   'galleryListPage',
+  'aboutPage',
+  'contactPage',
 ] as const;
 
 // If your homePage document was created with a UUID, add it here so the studio can resolve the type.
@@ -73,6 +75,8 @@ export default defineConfig({
         'centersListPage',
         'projectsListPage',
         'galleryListPage',
+        'aboutPage',
+        'contactPage',
       ],
       filterField: (enclosingType, member, selectedLanguageIds) =>
         !enclosingType.name.startsWith('locale') ||

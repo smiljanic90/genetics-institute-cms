@@ -11,6 +11,8 @@ import { newsListPage } from './singletons/newsListPage';
 import { centersListPage } from './singletons/centersListPage';
 import { projectsListPage } from './singletons/projectsListPage';
 import { galleryListPage } from './singletons/galleryListPage';
+import { aboutPage } from './singletons/aboutPage';
+import { contactPage } from './singletons/contactPage';
 import { blockContent } from './objects/blockContent';
 import { figure } from './objects/figure';
 import { seo } from './objects/seo';
@@ -23,6 +25,9 @@ import { homeSection } from './objects/homeSection';
 import { navItem } from './objects/navItem';
 import { footerLink } from './objects/footerLink';
 import { footerSection } from './objects/footerSection';
+import { aboutSection } from './objects/aboutSection';
+import { aboutOverviewCard } from './objects/aboutOverviewCard';
+import { aboutNavItem } from './objects/aboutNavItem';
 
 export const schemaTypes = [
   // Documents
@@ -41,6 +46,8 @@ export const schemaTypes = [
   centersListPage,
   projectsListPage,
   galleryListPage,
+  aboutPage,
+  contactPage,
 
   // Objects
   blockContent,
@@ -55,4 +62,7 @@ export const schemaTypes = [
   navItem,
   footerLink,
   footerSection,
+  aboutSection,
+  aboutOverviewCard,
+  aboutNavItem,
 ];

@@ -43,10 +43,23 @@ export const newsListPage = {
       to: [{ type: 'button' }],
     },
     {
+      name: 'viewAllButton',
+      title: 'Dugme "Pogledaj sve" (početna)',
+      type: 'reference',
+      to: [{ type: 'button' }],
+    },
+    {
       name: 'backButton',
       title: 'Dugme "Nazad"',
       type: 'reference',
       to: [{ type: 'button' }],
+    },
+    {
+      name: 'categoryFilterLabel',
+      title: 'Oznaka za Kategoriju',
+      description: 'Naslov iznad filtera kategorija (npr. "Kategorija")',
+      type: 'reference',
+      to: [{ type: 'label' }],
     },
     {
       name: 'categories',

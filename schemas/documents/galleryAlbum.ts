@@ -67,7 +67,7 @@ export const galleryAlbum = {
       titleSr: 'title.sr',
       titleSrCyr: 'title.srCyr',
       category: 'category',
-      media: 'coverImage',
+      media: 'images.0.image',
     },
     prepare({
       titleEn,

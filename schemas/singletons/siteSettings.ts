@@ -70,6 +70,56 @@ export const siteSettings = {
         { name: 'address', title: 'Adresa', type: 'string' },
       ],
     },
+    {
+      name: 'errorMessages',
+      title: 'Poruke grešaka',
+      type: 'object',
+      description: 'Tekstovi za 404 i error stranice.',
+      fields: [
+        {
+          name: 'notFoundTitle',
+          title: '404 naslov',
+          type: 'localeString',
+          description: 'npr. "Stranica nije pronađena"',
+        },
+        {
+          name: 'notFoundDescription',
+          title: '404 opis',
+          type: 'localeString',
+          description: 'npr. "Stranica koju tražite ne postoji ili je premještena."',
+        },
+        {
+          name: 'notFoundHomeButton',
+          title: '404 dugme "Početna"',
+          type: 'reference',
+          to: [{ type: 'label' }],
+        },
+        {
+          name: 'errorTitle',
+          title: 'Error naslov',
+          type: 'localeString',
+          description: 'npr. "Nešto je pošlo po zlu"',
+        },
+        {
+          name: 'errorDescription',
+          title: 'Error opis',
+          type: 'localeString',
+          description: 'npr. "Došlo je do neočekivane greške..."',
+        },
+        {
+          name: 'errorRetryButton',
+          title: 'Error dugme "Pokušaj ponovo"',
+          type: 'reference',
+          to: [{ type: 'label' }],
+        },
+        {
+          name: 'errorHomeButton',
+          title: 'Error dugme "Početna"',
+          type: 'reference',
+          to: [{ type: 'label' }],
+        },
+      ],
+    },
   ],
   preview: {
     select: { nameSr: 'name.sr', nameEn: 'name.en', nameSrCyr: 'name.srCyr' },
