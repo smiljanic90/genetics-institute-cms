@@ -21,6 +21,7 @@ export const aboutNavItem = {
           { title: 'Istorijat', value: 'history' },
           { title: 'Tim', value: 'team' },
           { title: 'Partneri', value: 'partners' },
+          { title: 'Propisi i Akti', value: 'regulations' },
         ],
         layout: 'dropdown',
       },
@@ -51,6 +52,7 @@ export const aboutNavItem = {
         history: 'Istorijat',
         team: 'Tim',
         partners: 'Partneri',
+        regulations: 'Propisi i Akti',
       };
       const fallback = sectionSlug ? sectionLabels[sectionSlug] : 'Stavka';
       return {

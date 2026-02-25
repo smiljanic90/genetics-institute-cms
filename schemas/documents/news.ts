@@ -20,6 +20,12 @@ export const news = {
         ),
     },
     {
+      name: 'image',
+      title: 'Naslovna slika',
+      type: 'image',
+      options: { hotspot: true },
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -46,6 +52,20 @@ export const news = {
     },
     { name: 'body', title: 'Sadržaj', type: 'localeBlockContent' },
     {
+      name: 'externalLink',
+      title: 'Link (Pogledajte više na)',
+      description:
+        'Opcioni link koji se prikazuje ispod sadržaja. Otvara se u novom tabu (npr. link na članak, izvor).',
+      type: 'url',
+    },
+    {
+      name: 'externalLinkLabel',
+      title: 'Tekst linka (opciono)',
+      description:
+        'Ako prazno, prikazuje se URL. Možete unijeti kratak tekst npr. "Otvori članak".',
+      type: 'localeString',
+    },
+    {
       name: 'category',
       title: 'Kategorija',
       type: 'reference',
@@ -60,12 +80,6 @@ export const news = {
       title: 'Datum',
       type: 'datetime',
       validation: (Rule: any) => Rule.required(),
-    },
-    {
-      name: 'image',
-      title: 'Naslovna slika',
-      type: 'image',
-      options: { hotspot: true },
     },
     {
       name: 'featured',

@@ -55,6 +55,14 @@ export const newsListPage = {
       to: [{ type: 'button' }],
     },
     {
+      name: 'externalLinkLabel',
+      title: 'Oznaka za eksterni link',
+      description:
+        'Tekst ispred linka u vijesti (npr. "Tekst linka:")',
+      type: 'reference',
+      to: [{ type: 'label' }],
+    },
+    {
       name: 'categoryFilterLabel',
       title: 'Oznaka za Kategoriju',
       description: 'Naslov iznad filtera kategorija (npr. "Kategorija")',

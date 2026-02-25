@@ -77,6 +77,18 @@ export const homeSection = {
       group: 'content',
     },
     {
+      name: 'heroBackgroundImage',
+      title: 'Slika pozadine (samo za Hero sekciju)',
+      description: 'Slika koja se prikazuje u pozadini hero sekcije na početnoj stranici',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      group: 'content',
+      hidden: ({ parent }: { parent?: { sectionType?: string } }) =>
+        parent?.sectionType !== 'hero',
+    },
+    {
       name: 'heroStats',
       title: 'Statistike (samo za Hero sekciju)',
       description:
@@ -121,6 +133,7 @@ export const homeSection = {
               { title: 'Istorijat', value: 'history' },
               { title: 'Tim', value: 'team' },
               { title: 'Partneri', value: 'partners' },
+              { title: 'Propisi i Akti', value: 'regulations' },
             ],
             layout: 'dropdown',
           },

@@ -21,7 +21,7 @@ export const aboutOverviewCard = {
     {
       name: 'icon',
       title: 'Ikona',
-      description: 'Ikona za karticu (Target, Eye, History, Users, Handshake)',
+      description: 'Ikona za karticu',
       type: 'string',
       options: {
         list: [
@@ -30,6 +30,7 @@ export const aboutOverviewCard = {
           { title: 'History (istorija)', value: 'history' },
           { title: 'Users (korisnici)', value: 'users' },
           { title: 'Handshake (rukovanje)', value: 'handshake' },
+          { title: 'FileText (dokument)', value: 'file-text' },
         ],
         layout: 'dropdown',
       },
@@ -44,6 +45,7 @@ export const aboutOverviewCard = {
           { title: 'Istorijat', value: 'history' },
           { title: 'Tim', value: 'team' },
           { title: 'Partneri', value: 'partners' },
+          { title: 'Propisi i Akti', value: 'regulations' },
         ],
         layout: 'dropdown',
       },
@@ -73,6 +75,7 @@ export const aboutOverviewCard = {
         history: 'Istorijat',
         team: 'Tim',
         partners: 'Partneri',
+        regulations: 'Propisi i Akti',
       };
       const fallback = sectionSlug ? sectionLabels[sectionSlug] : 'Kartica';
       return {

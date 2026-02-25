@@ -28,6 +28,10 @@ import { footerSection } from './objects/footerSection';
 import { aboutSection } from './objects/aboutSection';
 import { aboutOverviewCard } from './objects/aboutOverviewCard';
 import { aboutNavItem } from './objects/aboutNavItem';
+import { regulationsSection } from './objects/regulationsSection';
+import { regulationsDocument } from './objects/regulationsDocument';
+import { teamSection } from './objects/teamSection';
+import { teamMember } from './objects/teamMember';
 
 export const schemaTypes = [
   // Documents
@@ -65,4 +69,8 @@ export const schemaTypes = [
   aboutSection,
   aboutOverviewCard,
   aboutNavItem,
+  regulationsSection,
+  regulationsDocument,
+  teamSection,
+  teamMember,
 ];

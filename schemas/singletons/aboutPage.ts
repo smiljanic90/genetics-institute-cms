@@ -62,12 +62,19 @@ export const aboutPage = {
     {
       name: 'teamSection',
       title: 'Sekcija: Tim',
-      type: 'aboutSection',
+      description: 'Lista članova tima s kategorijama i filterima',
+      type: 'teamSection',
     },
     {
       name: 'partnersSection',
       title: 'Sekcija: Partneri',
       type: 'aboutSection',
+    },
+    {
+      name: 'regulationsSection',
+      title: 'Sekcija: Propisi i Akti',
+      description: 'Lista PDF dokumenata (propisi, akti)',
+      type: 'regulationsSection',
     },
   ],
   preview: {
