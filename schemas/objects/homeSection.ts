@@ -2,8 +2,8 @@ const SECTION_TYPES = [
   { title: 'Hero (naslovnica)', value: 'hero' },
   { title: 'O nama', value: 'about' },
   { title: 'Naši partneri', value: 'partners' },
-  { title: 'Naši centri', value: 'centers' },
-  { title: 'Projekti', value: 'projects' },
+  { title: 'Organizacija i aktivnosti', value: 'orgActivities' },
+  { title: 'Projekti i usluge', value: 'projects' },
   { title: 'Novosti', value: 'news' },
   { title: 'Galerija', value: 'gallery' },
   { title: 'Kontakt', value: 'contact' },
@@ -15,9 +15,9 @@ export const homeSection = {
   type: 'object',
   groups: [
     { name: 'content', title: 'Sadržaj', default: true },
-    { name: 'projects', title: 'Projekti (samo za sekciju Projekti)' },
+    { name: 'projects', title: 'Projekti i usluge' },
     { name: 'news', title: 'Novosti (samo za sekciju Novosti)' },
-    { name: 'centers', title: 'Centri (samo za sekciju Centri)' },
+    { name: 'orgActivities', title: 'Organizacija i aktivnosti' },
     { name: 'gallery', title: 'Galerija (samo za sekciju Galerija)' },
     { name: 'partners', title: 'Partneri (samo za sekciju Partneri)' },
   ],
@@ -191,29 +191,34 @@ export const homeSection = {
       hidden: ({ parent }: { parent?: { sectionType?: string } }) =>
         parent?.sectionType !== 'news',
     },
-    // Centri
+    // Organizacija i aktivnosti
     {
-      name: 'featuredCenters',
-      title: 'Odabrani centri',
+      name: 'selectedOrgActivitiesCardSlugs',
+      title: 'Odabrane kartice',
       description:
-        'Ako odaberete centri, prikazuju se samo oni (redoslijed važi). Ako ne odaberete nijedan, prikazuju se svi centri.',
+        'Odaberi koje kartice sa Stranice Organizacija i aktivnosti prikazati i u kojem redoslijedu.',
       type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'center' }] }],
-      group: 'centers',
+      of: [
+        {
+          type: 'string',
+          options: {
+            list: [
+              { title: 'Banka gena', value: 'banka-gena' },
+              { title: 'Botanička bašta', value: 'botanicka-basta' },
+              { title: 'Poljske kolekcije', value: 'poljske-kolekcije' },
+              { title: 'Laboratorije', value: 'laboratorije' },
+              {
+                title: 'Zaštićeno područje',
+                value: 'zasticeno-podrucje',
+              },
+            ],
+            layout: 'dropdown',
+          },
+        },
+      ],
+      group: 'orgActivities',
       hidden: ({ parent }: { parent?: { sectionType?: string } }) =>
-        parent?.sectionType !== 'centers',
-    },
-    {
-      name: 'centersLimit',
-      title: 'Broj centara (kad nisu odabrani)',
-      type: 'number',
-      initialValue: 5,
-      validation: (Rule: {
-        min: (n: number) => { max: (m: number) => unknown };
-      }) => Rule.min(1).max(20),
-      group: 'centers',
-      hidden: ({ parent }: { parent?: { sectionType?: string } }) =>
-        parent?.sectionType !== 'centers',
+        parent?.sectionType !== 'orgActivities',
     },
     // Galerija
     {
@@ -275,8 +280,8 @@ export const homeSection = {
         hero: 'Hero',
         about: 'O nama',
         partners: 'Naši partneri',
-        centers: 'Naši centri',
-        projects: 'Projekti',
+        orgActivities: 'Organizacija i aktivnosti',
+        projects: 'Projekti i usluge',
         news: 'Novosti',
         gallery: 'Galerija',
         contact: 'Kontakt',

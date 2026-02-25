@@ -26,7 +26,7 @@ export const galleryAlbum = {
       options: {
         source: (doc: {
           title?: { en?: string; sr?: string; srCyr?: string };
-        }) => doc?.title?.en || doc?.title?.sr || doc?.title?.srCyr || '',
+        }) => doc?.title?.sr || '',
         maxLength: 96,
       },
       validation: (Rule: any) => Rule.required(),

@@ -20,22 +20,22 @@ export const news = {
         ),
     },
     {
-      name: 'image',
-      title: 'Naslovna slika',
-      type: 'image',
-      options: { hotspot: true },
-    },
-    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
       options: {
         source: (doc: {
           title?: { en?: string; sr?: string; srCyr?: string };
-        }) => doc?.title?.en || doc?.title?.sr || doc?.title?.srCyr || '',
+        }) => doc?.title?.sr || '',
         maxLength: 96,
       },
       validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'image',
+      title: 'Naslovna slika',
+      type: 'image',
+      options: { hotspot: true },
     },
     {
       name: 'excerpt',
@@ -64,6 +64,22 @@ export const news = {
       description:
         'Ako prazno, prikazuje se URL. Možete unijeti kratak tekst npr. "Otvori članak".',
       type: 'localeString',
+    },
+    {
+      name: 'documents',
+      title: 'PDF dokumenti',
+      description: 'Opcioni PDF dokumenti za preuzimanje (npr. prilozi, publikacije)',
+      type: 'array',
+      of: [{ type: 'newsDocument' }],
+    },
+    {
+      name: 'documentsLabel',
+      title: 'Oznaka za PDF dokumente',
+      description:
+        'Naslov iznad liste PDF dokumenata. Obavezno kada dodajete PDF dokumente. Unesite prijevode za sve jezike.',
+      type: 'localeString',
+      hidden: ({ parent }: { parent?: { documents?: unknown[] } }) =>
+        !parent?.documents?.length,
     },
     {
       name: 'category',

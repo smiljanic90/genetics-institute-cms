@@ -12,7 +12,7 @@ export const navItem = {
     {
       name: 'path',
       title: 'Putanja',
-      description: 'Unutrašnja putanja bez jezika (npr. /o-institutu, /centri, /projekti). Za eksterni link koristite polje za eksterni URL.',
+      description: 'Unutrašnja putanja bez jezika (npr. /o-institutu, /organizacija-i-aktivnosti, /projekti-i-usluge). Za eksterni link koristite polje za eksterni URL.',
       type: 'string',
       hidden: ({ parent }: { parent?: { linkType?: string } }) =>
         parent?.linkType === 'external',

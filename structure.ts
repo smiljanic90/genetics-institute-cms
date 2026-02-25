@@ -29,18 +29,18 @@ export const structure: StructureResolver = (S) =>
             .documentId('newsListPage'),
         ),
       S.listItem()
-        .id('centersListPage')
-        .schemaType('centersListPage')
-        .title('Stranica: Centri')
+        .id('orgActivitiesPage')
+        .schemaType('orgActivitiesPage')
+        .title('Stranica: Organizacija i aktivnosti')
         .child(
           S.document()
-            .schemaType('centersListPage')
-            .documentId('centersListPage'),
+            .schemaType('orgActivitiesPage')
+            .documentId('orgActivitiesPage'),
         ),
       S.listItem()
         .id('projectsListPage')
         .schemaType('projectsListPage')
-        .title('Stranica: Projekti')
+        .title('Stranica: Projekti i usluge')
         .child(
           S.document()
             .schemaType('projectsListPage')
@@ -78,6 +78,6 @@ export const structure: StructureResolver = (S) =>
       // Document types
       S.documentTypeListItem('news').title('Novosti'),
       S.documentTypeListItem('center').title('Centri'),
-      S.documentTypeListItem('project').title('Projekti'),
+      S.documentTypeListItem('project').title('Projekti i usluge'),
       S.documentTypeListItem('galleryAlbum').title('Galerija – albumi'),
     ]);

@@ -26,10 +26,16 @@ export const center = {
       options: {
         source: (doc: {
           title?: { en?: string; sr?: string; srCyr?: string };
-        }) => doc?.title?.en || doc?.title?.sr || doc?.title?.srCyr || '',
+        }) => doc?.title?.sr || '',
         maxLength: 96,
       },
       validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'image',
+      title: 'Naslovna slika',
+      type: 'image',
+      options: { hotspot: true },
     },
     {
       name: 'excerpt',
@@ -45,12 +51,6 @@ export const center = {
         ),
     },
     { name: 'description', title: 'Detaljan opis', type: 'localeBlockContent' },
-    {
-      name: 'image',
-      title: 'Naslovna slika',
-      type: 'image',
-      options: { hotspot: true },
-    },
     {
       name: 'relatedCenters',
       title: 'Povezani centri',

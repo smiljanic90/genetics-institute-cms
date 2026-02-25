@@ -10,7 +10,7 @@ export const homePage = {
       name: 'sections',
       title: 'Sekcije',
       description:
-        'Redoslijed sekcija na početnoj stranici. Možete dodati novu sekciju, ukloniti ili promijeniti redoslijed. Za svaku sekciju možete postaviti naslov, opis i (za Projekti/Novosti/Centri/Galerija/Partneri) šta tačno prikazati.',
+        'Redoslijed sekcija na početnoj stranici. Možete dodati novu sekciju, ukloniti ili promijeniti redoslijed. Za svaku sekciju možete postaviti naslov, opis i (za Projekti i usluge/Novosti/Organizacija i aktivnosti/Galerija/Partneri) šta tačno prikazati.',
       type: 'array',
       of: [{ type: 'homeSection' }],
     },

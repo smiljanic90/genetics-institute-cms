@@ -12,6 +12,7 @@ import { centersListPage } from './singletons/centersListPage';
 import { projectsListPage } from './singletons/projectsListPage';
 import { galleryListPage } from './singletons/galleryListPage';
 import { aboutPage } from './singletons/aboutPage';
+import { orgActivitiesPage } from './singletons/orgActivitiesPage';
 import { contactPage } from './singletons/contactPage';
 import { blockContent } from './objects/blockContent';
 import { figure } from './objects/figure';
@@ -28,6 +29,9 @@ import { footerSection } from './objects/footerSection';
 import { aboutSection } from './objects/aboutSection';
 import { aboutOverviewCard } from './objects/aboutOverviewCard';
 import { aboutNavItem } from './objects/aboutNavItem';
+import { orgActivitiesNavItem } from './objects/orgActivitiesNavItem';
+import { orgActivitiesOverviewCard } from './objects/orgActivitiesOverviewCard';
+import { newsDocument } from './objects/newsDocument';
 import { regulationsSection } from './objects/regulationsSection';
 import { regulationsDocument } from './objects/regulationsDocument';
 import { teamSection } from './objects/teamSection';
@@ -51,6 +55,7 @@ export const schemaTypes = [
   projectsListPage,
   galleryListPage,
   aboutPage,
+  orgActivitiesPage,
   contactPage,
 
   // Objects
@@ -69,6 +74,9 @@ export const schemaTypes = [
   aboutSection,
   aboutOverviewCard,
   aboutNavItem,
+  orgActivitiesNavItem,
+  orgActivitiesOverviewCard,
+  newsDocument,
   regulationsSection,
   regulationsDocument,
   teamSection,

@@ -36,10 +36,10 @@ export const siteSettings = {
           description: 'Linkovi u koloni Institut',
         },
         {
-          name: 'centri',
-          title: 'Centri',
+          name: 'organizacija',
+          title: 'Organizacija i aktivnosti',
           type: 'footerSection',
-          description: 'Linkovi u koloni Centri',
+          description: 'Linkovi u koloni Organizacija i aktivnosti',
         },
         {
           name: 'resursi',

@@ -1,6 +1,6 @@
 export const projectsListPage = {
   name: 'projectsListPage',
-  title: 'Stranica: Projekti',
+  title: 'Stranica: Projekti i usluge',
   type: 'document',
   options: {
     languageFilter: true,
@@ -85,7 +85,7 @@ export const projectsListPage = {
   ],
   preview: {
     prepare() {
-      return { title: 'Stranica: Projekti' };
+      return { title: 'Stranica: Projekti i usluge' };
     },
   },
 };

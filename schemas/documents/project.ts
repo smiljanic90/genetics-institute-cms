@@ -1,6 +1,6 @@
 export const project = {
   name: 'project',
-  title: 'Projekti',
+  title: 'Projekti i usluge',
   type: 'document',
   options: {
     languageFilter: true,
@@ -26,10 +26,16 @@ export const project = {
       options: {
         source: (doc: {
           title?: { en?: string; sr?: string; srCyr?: string };
-        }) => doc?.title?.en || doc?.title?.sr || doc?.title?.srCyr || '',
+        }) => doc?.title?.sr || '',
         maxLength: 96,
       },
       validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'image',
+      title: 'Naslovna slika',
+      type: 'image',
+      options: { hotspot: true },
     },
     {
       name: 'excerpt',
@@ -72,12 +78,6 @@ export const project = {
         layout: 'radio',
       },
       validation: (Rule: any) => Rule.required(),
-    },
-    {
-      name: 'image',
-      title: 'Naslovna slika',
-      type: 'image',
-      options: { hotspot: true },
     },
     {
       name: 'relatedProjects',
