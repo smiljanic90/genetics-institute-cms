@@ -42,6 +42,19 @@ export const galleryListPage = {
       to: [{ type: 'button' }],
     },
     {
+      name: 'allCategoryLabel',
+      title: 'Oznaka "Sve" u filteru',
+      type: 'reference',
+      to: [{ type: 'label' }],
+    },
+    {
+      name: 'categoryFilterLabel',
+      title: 'Naslov filtera kategorija',
+      description: 'Npr. "Kategorija" ili "Kategorije"',
+      type: 'reference',
+      to: [{ type: 'label' }],
+    },
+    {
       name: 'categories',
       title: 'Kategorije za filter',
       type: 'array',

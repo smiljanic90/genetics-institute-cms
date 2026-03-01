@@ -55,6 +55,13 @@ export const projectsListPage = {
       to: [{ type: 'label' }],
     },
     {
+      name: 'allFilterLabel',
+      title: 'Oznaka "Sve" u filterima',
+      description: 'Label za opciju "Sve" u filterima kategorija i statusa',
+      type: 'reference',
+      to: [{ type: 'label' }],
+    },
+    {
       name: 'categoryFilterLabel',
       title: 'Oznaka za Kategorije',
       description: 'Naslov iznad filtera kategorija (npr. "Kategorija" ili "Kategorije")',
@@ -81,6 +88,81 @@ export const projectsListPage = {
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'category' }] }],
       filter: '"status" in categoryTypes',
+    },
+    // Tabovi: Projekti / Usluge
+    {
+      name: 'projectsTabLabel',
+      title: 'Tab "Projekti"',
+      description: 'Label za tab Projekti',
+      type: 'reference',
+      to: [{ type: 'label' }],
+    },
+    {
+      name: 'projectsTabTitleLabel',
+      title: 'Naslov (tab Projekti)',
+      description: 'Naslov koji se prikazuje iznad sadržaja kada je tab Projekti aktivan',
+      type: 'reference',
+      to: [{ type: 'label' }],
+    },
+    {
+      name: 'projectsTabShortDescription',
+      title: 'Kratki opis (tab Projekti)',
+      description: 'Kratki opis ispod naslova na tabu Projekti',
+      type: 'localeText',
+    },
+    {
+      name: 'servicesTabLabel',
+      title: 'Tab "Usluge"',
+      description: 'Label za tab Usluge',
+      type: 'reference',
+      to: [{ type: 'label' }],
+    },
+    {
+      name: 'servicesTabTitleLabel',
+      title: 'Naslov (tab Usluge)',
+      description: 'Naslov koji se prikazuje iznad sadržaja kada je tab Usluge aktivan',
+      type: 'reference',
+      to: [{ type: 'label' }],
+    },
+    {
+      name: 'servicesTabShortDescription',
+      title: 'Kratki opis (tab Usluge)',
+      description: 'Kratki opis ispod naslova na tabu Usluge',
+      type: 'localeText',
+    },
+    // Usluge – bočna navigacija i sekcije
+    {
+      name: 'servicesNavigationHeadingLabel',
+      title: 'Naslov navigacije (Usluge)',
+      description: 'Naslov za bočnu navigaciju na tabu Usluge (npr. "Navigacija")',
+      type: 'reference',
+      to: [{ type: 'label' }],
+    },
+    {
+      name: 'servicesNavigationItems',
+      title: 'Navigacija (Usluge)',
+      description:
+        'Stavke bočne navigacije na tabu Usluge. Redosled određuje prikaz.',
+      type: 'array',
+      of: [{ type: 'servicesNavItem' }],
+    },
+    {
+      name: 'laboratorijskeUslugeSection',
+      title: 'Sekcija: Laboratorijske usluge',
+      description: 'Tekst i fotografije',
+      type: 'aboutSection',
+    },
+    {
+      name: 'savjetodavneUslugeSection',
+      title: 'Sekcija: Savjetodavne usluge iz oblasti hortikulturnog uređenja i voćarstva',
+      description: 'Tekst i fotografije',
+      type: 'aboutSection',
+    },
+    {
+      name: 'rasadnikSection',
+      title: 'Sekcija: Rasadnik voćaka i ukrasnog sadnog materijala',
+      description: 'Tekst i fotografije',
+      type: 'aboutSection',
     },
   ],
   preview: {
