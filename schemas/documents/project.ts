@@ -52,6 +52,37 @@ export const project = {
     },
     { name: 'body', title: 'Detaljan opis', type: 'localeBlockContent' },
     {
+      name: 'externalLink',
+      title: 'Eksterni link',
+      description:
+        'Opcioni link koji se prikazuje ispod sadržaja. Otvara se u novom tabu.',
+      type: 'url',
+    },
+    {
+      name: 'externalLinkLabel',
+      title: 'Tekst linka (opciono)',
+      description:
+        'Ako prazno, koristi se default iz postavki stranice. Npr. "Saznaj više".',
+      type: 'localeString',
+    },
+    {
+      name: 'documents',
+      title: 'PDF dokumenti',
+      description:
+        'Opcioni PDF dokumenti za preuzimanje. Za svaki možeš označiti "Dodaj na Publikacije".',
+      type: 'array',
+      of: [{ type: 'projectDocument' }],
+    },
+    {
+      name: 'documentsLabel',
+      title: 'Oznaka za PDF dokumente',
+      description:
+        'Naslov iznad liste PDF dokumenata. Obavezno kada dodaješ PDF dokumente.',
+      type: 'localeString',
+      hidden: ({ parent }: { parent?: { documents?: unknown[] } }) =>
+        !parent?.documents?.length,
+    },
+    {
       name: 'category',
       title: 'Kategorija',
       type: 'string',

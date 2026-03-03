@@ -80,6 +80,20 @@ export const orgActivitiesPage = {
       description: 'Tekst i fotografije',
       type: 'aboutSection',
     },
+    {
+      name: 'publikacijeSection',
+      title: 'Sekcija: Publikacije',
+      description: 'Tekst i fotografije. PDF dokumenti iz projekata označeni "Dodaj na Publikacije" se prikazuju automatski.',
+      type: 'aboutSection',
+    },
+    {
+      name: 'publicationDocumentsLabel',
+      title: 'Oznaka za PDF dokumente (Publikacije)',
+      description:
+        'Naslov iznad liste PDF dokumenata na stranici Publikacije. Npr. "Dokumenti za preuzimanje", "Publikacije". Obavezno kada ima PDF dokumenata iz projekata.',
+      type: 'reference',
+      to: [{ type: 'label' }],
+    },
   ],
   preview: {
     prepare() {

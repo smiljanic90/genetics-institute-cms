@@ -27,5 +27,13 @@ export const regulationsSection = {
       type: 'array',
       of: [{ type: 'regulationsDocument' }],
     },
+    {
+      name: 'externalLinks',
+      title: 'Eksterni linkovi',
+      description:
+        'Linkovi ka vanjskim stranicama (npr. Službeni glasnik). Klik otvara u novom tabu.',
+      type: 'array',
+      of: [{ type: 'regulationsExternalLink' }],
+    },
   ],
 };

@@ -55,6 +55,22 @@ export const projectsListPage = {
       to: [{ type: 'label' }],
     },
     {
+      name: 'externalLinkLabel',
+      title: 'Default tekst za link',
+      description:
+        'Koristi se kada projekat ima eksterni link a nije unesen custom label. Npr. "Tekst linka:"',
+      type: 'reference',
+      to: [{ type: 'label' }],
+    },
+    {
+      name: 'documentsLabel',
+      title: 'Default oznaka za PDF dokumente',
+      description:
+        'Koristi se kada projekat ima PDF dokumente a nije unesen custom label. Npr. "Dokumenti"',
+      type: 'reference',
+      to: [{ type: 'label' }],
+    },
+    {
       name: 'allFilterLabel',
       title: 'Oznaka "Sve" u filterima',
       description: 'Label za opciju "Sve" u filterima kategorija i statusa',

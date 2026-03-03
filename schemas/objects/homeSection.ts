@@ -211,6 +211,7 @@ export const homeSection = {
                 title: 'Zaštićeno područje',
                 value: 'zasticeno-podrucje',
               },
+              { title: 'Publikacije', value: 'publikacije' },
             ],
             layout: 'dropdown',
           },

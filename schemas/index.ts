@@ -33,8 +33,10 @@ import { orgActivitiesNavItem } from './objects/orgActivitiesNavItem';
 import { servicesNavItem } from './objects/servicesNavItem';
 import { orgActivitiesOverviewCard } from './objects/orgActivitiesOverviewCard';
 import { newsDocument } from './objects/newsDocument';
+import { projectDocument } from './objects/projectDocument';
 import { regulationsSection } from './objects/regulationsSection';
 import { regulationsDocument } from './objects/regulationsDocument';
+import { regulationsExternalLink } from './objects/regulationsExternalLink';
 import { teamSection } from './objects/teamSection';
 import { teamMember } from './objects/teamMember';
 
@@ -79,8 +81,10 @@ export const schemaTypes = [
   orgActivitiesOverviewCard,
   servicesNavItem,
   newsDocument,
+  projectDocument,
   regulationsSection,
   regulationsDocument,
+  regulationsExternalLink,
   teamSection,
   teamMember,
 ];

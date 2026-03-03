@@ -25,6 +25,7 @@ export const orgActivitiesNavItem = {
             title: 'Zaštićeno područje Spomenik parkovske arhitekture „Univerzitetski grad"',
             value: 'zasticeno-podrucje',
           },
+          { title: 'Publikacije', value: 'publikacije' },
         ],
         layout: 'dropdown',
       },
@@ -56,6 +57,7 @@ export const orgActivitiesNavItem = {
         'poljske-kolekcije': 'Poljske kolekcije',
         laboratorije: 'Laboratorije',
         'zasticeno-podrucje': 'Zaštićeno područje',
+        publikacije: 'Publikacije',
       };
       const fallback = sectionSlug ? sectionLabels[sectionSlug] : 'Stavka';
       return {

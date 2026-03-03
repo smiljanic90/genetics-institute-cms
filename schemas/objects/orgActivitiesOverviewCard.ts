@@ -38,6 +38,7 @@ export const orgActivitiesOverviewCard = {
             title: 'Zaštićeno područje',
             value: 'zasticeno-podrucje',
           },
+          { title: 'Publikacije', value: 'publikacije' },
         ],
         layout: 'dropdown',
       },
@@ -68,6 +69,7 @@ export const orgActivitiesOverviewCard = {
         'poljske-kolekcije': 'Poljske kolekcije',
         laboratorije: 'Laboratorije',
         'zasticeno-podrucje': 'Zaštićeno područje',
+        publikacije: 'Publikacije',
       };
       const fallback = sectionSlug ? sectionLabels[sectionSlug] : 'Kartica';
       return {

@@ -1506,6 +1506,20 @@
         "title": "Oznaka \"Nema slike\""
       },
       {
+        "description": "Label za opciju \"Sve\" u filterima kategorija i statusa",
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "allFilterLabel",
+        "type": "reference",
+        "title": "Oznaka \"Sve\" u filterima"
+      },
+      {
         "description": "Naslov iznad filtera kategorija (npr. \"Kategorija\" ili \"Kategorije\")",
         "to": [
           {
@@ -1572,6 +1586,138 @@
         "name": "statusCategories",
         "type": "array",
         "title": "Statusi (aktivno, završeno, planirano)"
+      },
+      {
+        "description": "Label za tab Projekti",
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "projectsTabLabel",
+        "type": "reference",
+        "title": "Tab \"Projekti\""
+      },
+      {
+        "description": "Naslov koji se prikazuje iznad sadržaja kada je tab Projekti aktivan",
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "projectsTabTitleLabel",
+        "type": "reference",
+        "title": "Naslov (tab Projekti)"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "description": "Kratki opis ispod naslova na tabu Projekti",
+        "name": "projectsTabShortDescription",
+        "type": "localeText",
+        "title": "Kratki opis (tab Projekti)"
+      },
+      {
+        "description": "Label za tab Usluge",
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "servicesTabLabel",
+        "type": "reference",
+        "title": "Tab \"Usluge\""
+      },
+      {
+        "description": "Naslov koji se prikazuje iznad sadržaja kada je tab Usluge aktivan",
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "servicesTabTitleLabel",
+        "type": "reference",
+        "title": "Naslov (tab Usluge)"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "description": "Kratki opis ispod naslova na tabu Usluge",
+        "name": "servicesTabShortDescription",
+        "type": "localeText",
+        "title": "Kratki opis (tab Usluge)"
+      },
+      {
+        "description": "Naslov za bočnu navigaciju na tabu Usluge (npr. \"Navigacija\")",
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "servicesNavigationHeadingLabel",
+        "type": "reference",
+        "title": "Naslov navigacije (Usluge)"
+      },
+      {
+        "description": "Stavke bočne navigacije na tabu Usluge. Redosled određuje prikaz.",
+        "of": [
+          {
+            "type": "servicesNavItem",
+            "title": "Navigacijska stavka (Usluge)"
+          }
+        ],
+        "name": "servicesNavigationItems",
+        "type": "array",
+        "title": "Navigacija (Usluge)"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "description": "Tekst i fotografije",
+        "name": "laboratorijskeUslugeSection",
+        "type": "aboutSection",
+        "title": "Sekcija: Laboratorijske usluge"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "description": "Tekst i fotografije",
+        "name": "savjetodavneUslugeSection",
+        "type": "aboutSection",
+        "title": "Sekcija: Savjetodavne usluge iz oblasti hortikulturnog uređenja i voćarstva"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "description": "Tekst i fotografije",
+        "name": "rasadnikSection",
+        "type": "aboutSection",
+        "title": "Sekcija: Rasadnik voćaka i ukrasnog sadnog materijala"
       }
     ],
     "name": "projectsListPage",
@@ -1656,6 +1802,33 @@
         "name": "backButton",
         "type": "reference",
         "title": "Dugme \"Nazad\""
+      },
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "allCategoryLabel",
+        "type": "reference",
+        "title": "Oznaka \"Sve\" u filteru"
+      },
+      {
+        "description": "Npr. \"Kategorija\" ili \"Kategorije\"",
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "categoryFilterLabel",
+        "type": "reference",
+        "title": "Naslov filtera kategorija"
       },
       {
         "filter": "\"gallery\" in categoryTypes",
@@ -3543,6 +3716,67 @@
     "name": "orgActivitiesOverviewCard",
     "type": "object",
     "title": "Kartica pregleda"
+  },
+  {
+    "fields": [
+      {
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "label",
+        "type": "reference"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Laboratorijske usluge",
+              "value": "laboratorijske-usluge"
+            },
+            {
+              "title": "Savjetodavne usluge iz oblasti hortikulturnog uređenja i voćarstva",
+              "value": "savjetodavne-usluge"
+            },
+            {
+              "title": "Rasadnik voćaka i ukrasnog sadnog materijala",
+              "value": "rasadnik"
+            }
+          ],
+          "layout": "dropdown"
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "valid",
+                "constraint": [
+                  "laboratorijske-usluge",
+                  "savjetodavne-usluge",
+                  "rasadnik"
+                ]
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Koja sekcija se učitava kada se klikne na ovu stavku",
+        "name": "sectionSlug",
+        "type": "string",
+        "title": "Sekcija"
+      }
+    ],
+    "name": "servicesNavItem",
+    "type": "object",
+    "title": "Navigacijska stavka (Usluge)"
   },
   {
     "fields": [
