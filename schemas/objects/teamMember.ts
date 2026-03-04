@@ -2,7 +2,8 @@ export const TEAM_CATEGORIES = [
   { title: 'Direktor', value: 'direktor' },
   { title: 'Naučno vijeće instituta', value: 'naucno_vijece_instituta' },
   { title: 'Administrativno osoblje', value: 'administrativno_osoblje' },
-  { title: 'Stalni saradnici', value: 'stalni_saradnici' },
+  { title: 'Spoljni saradnici', value: 'spoljni_saradnici' },
+  { title: 'Tehničko osoblje', value: 'tehnicko_osoblje' },
   {
     title: 'Osoblje u naučnom i istraživačkom zvanju',
     value: 'osoblje_u_naucnom_i_istrazivackom_zvanju',

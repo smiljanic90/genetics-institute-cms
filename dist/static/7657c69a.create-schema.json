@@ -400,6 +400,66 @@
         "title": "Detaljan opis"
       },
       {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Opcioni link koji se prikazuje ispod sadržaja. Otvara se u novom tabu.",
+        "name": "externalLink",
+        "type": "url",
+        "title": "Eksterni link"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "description": "Ako prazno, koristi se default iz postavki stranice. Npr. \"Saznaj više\".",
+        "name": "externalLinkLabel",
+        "type": "localeString",
+        "title": "Tekst linka (opciono)"
+      },
+      {
+        "description": "Opcioni PDF dokumenti za preuzimanje. Za svaki možeš označiti \"Dodaj na Publikacije\".",
+        "of": [
+          {
+            "type": "projectDocument",
+            "title": "PDF dokument projekta"
+          }
+        ],
+        "name": "documents",
+        "type": "array",
+        "title": "PDF dokumenti"
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "description": "Naslov iznad liste PDF dokumenata. Obavezno kada dodaješ PDF dokumente.",
+        "hidden": "conditional",
+        "name": "documentsLabel",
+        "type": "localeString",
+        "title": "Oznaka za PDF dokumente"
+      },
+      {
         "options": {
           "list": [
             {
@@ -1506,6 +1566,34 @@
         "title": "Oznaka \"Nema slike\""
       },
       {
+        "description": "Koristi se kada projekat ima eksterni link a nije unesen custom label. Npr. \"Tekst linka:\"",
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "externalLinkLabel",
+        "type": "reference",
+        "title": "Default tekst za link"
+      },
+      {
+        "description": "Koristi se kada projekat ima PDF dokumente a nije unesen custom label. Npr. \"Dokumenti\"",
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "documentsLabel",
+        "type": "reference",
+        "title": "Default oznaka za PDF dokumente"
+      },
+      {
         "description": "Label za opciju \"Sve\" u filterima kategorija i statusa",
         "to": [
           {
@@ -2126,6 +2214,30 @@
         "name": "zasticenoPodrucjeSection",
         "type": "aboutSection",
         "title": "Sekcija: Zaštićeno područje Spomenik parkovske arhitekture „Univerzitetski grad\""
+      },
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "description": "Tekst i fotografije. PDF dokumenti iz projekata označeni \"Dodaj na Publikacije\" se prikazuju automatski.",
+        "name": "publikacijeSection",
+        "type": "aboutSection",
+        "title": "Sekcija: Publikacije"
+      },
+      {
+        "description": "Naslov iznad liste PDF dokumenata na stranici Publikacije. Npr. \"Dokumenti za preuzimanje\", \"Publikacije\". Obavezno kada ima PDF dokumenata iz projekata.",
+        "to": [
+          {
+            "options": {
+              "languageFilter": true
+            },
+            "type": "label"
+          }
+        ],
+        "name": "publicationDocumentsLabel",
+        "type": "reference",
+        "title": "Oznaka za PDF dokumente (Publikacije)"
       }
     ],
     "name": "orgActivitiesPage",
@@ -3041,6 +3153,10 @@
                 {
                   "title": "Zaštićeno područje",
                   "value": "zasticeno-podrucje"
+                },
+                {
+                  "title": "Publikacije",
+                  "value": "publikacije"
                 }
               ],
               "layout": "dropdown"
@@ -3589,6 +3705,10 @@
             {
               "title": "Zaštićeno područje Spomenik parkovske arhitekture „Univerzitetski grad\"",
               "value": "zasticeno-podrucje"
+            },
+            {
+              "title": "Publikacije",
+              "value": "publikacije"
             }
           ],
           "layout": "dropdown"
@@ -3604,7 +3724,8 @@
                   "botanicka-basta",
                   "poljske-kolekcije",
                   "laboratorije",
-                  "zasticeno-podrucje"
+                  "zasticeno-podrucje",
+                  "publikacije"
                 ]
               },
               {
@@ -3683,6 +3804,10 @@
             {
               "title": "Zaštićeno područje",
               "value": "zasticeno-podrucje"
+            },
+            {
+              "title": "Publikacije",
+              "value": "publikacije"
             }
           ],
           "layout": "dropdown"
@@ -3697,7 +3822,8 @@
                   "botanicka-basta",
                   "poljske-kolekcije",
                   "laboratorije",
-                  "zasticeno-podrucje"
+                  "zasticeno-podrucje",
+                  "publikacije"
                 ]
               },
               {
@@ -3826,6 +3952,60 @@
     "title": "PDF dokument"
   },
   {
+    "fields": [
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Naziv koji se prikazuje kao link za preuzimanje",
+        "name": "titleLabel",
+        "type": "localeString",
+        "title": "Naziv dokumenta"
+      },
+      {
+        "options": {
+          "accept": "application/pdf"
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "file",
+        "type": "file",
+        "title": "PDF fajl"
+      },
+      {
+        "initialValue": false,
+        "description": "Ako je označeno, ovaj PDF će se prikazati na stranici Publikacije (Organizacija i aktivnosti)",
+        "name": "showOnPublications",
+        "type": "boolean",
+        "title": "Dodaj na Publikacije"
+      }
+    ],
+    "name": "projectDocument",
+    "type": "object",
+    "title": "PDF dokument projekta"
+  },
+  {
     "options": {
       "collapsible": true,
       "collapsed": false
@@ -3866,6 +4046,18 @@
         "name": "documents",
         "type": "array",
         "title": "Dokumenti (PDF)"
+      },
+      {
+        "description": "Linkovi ka vanjskim stranicama (npr. Službeni glasnik). Klik otvara u novom tabu.",
+        "of": [
+          {
+            "type": "regulationsExternalLink",
+            "title": "Eksterni link"
+          }
+        ],
+        "name": "externalLinks",
+        "type": "array",
+        "title": "Eksterni linkovi"
       }
     ],
     "name": "regulationsSection",
@@ -3917,6 +4109,70 @@
     "name": "regulationsDocument",
     "type": "object",
     "title": "Dokument (PDF)"
+  },
+  {
+    "fields": [
+      {
+        "options": {
+          "collapsible": true,
+          "collapsed": false
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Tekst koji se prikazuje kao link (otvara se u novom tabu)",
+        "name": "titleLabel",
+        "type": "localeString",
+        "title": "Naziv linka"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "url",
+        "type": "url",
+        "title": "URL adresa"
+      },
+      {
+        "description": "Za hronološko sortiranje (najnoviji na vrhu). Ako prazno, koristi se redoslijed u listi.",
+        "name": "date",
+        "type": "datetime",
+        "title": "Datum"
+      }
+    ],
+    "name": "regulationsExternalLink",
+    "type": "object",
+    "title": "Eksterni link"
   },
   {
     "options": {
@@ -4050,8 +4306,12 @@
               "value": "administrativno_osoblje"
             },
             {
-              "title": "Stalni saradnici",
-              "value": "stalni_saradnici"
+              "title": "Spoljni saradnici",
+              "value": "spoljni_saradnici"
+            },
+            {
+              "title": "Tehničko osoblje",
+              "value": "tehnicko_osoblje"
             },
             {
               "title": "Osoblje u naučnom i istraživačkom zvanju",
@@ -4069,7 +4329,8 @@
                   "direktor",
                   "naucno_vijece_instituta",
                   "administrativno_osoblje",
-                  "stalni_saradnici",
+                  "spoljni_saradnici",
+                  "tehnicko_osoblje",
                   "osoblje_u_naucnom_i_istrazivackom_zvanju"
                 ]
               },
