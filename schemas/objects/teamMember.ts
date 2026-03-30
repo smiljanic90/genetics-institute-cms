@@ -42,17 +42,12 @@ export const teamMember = {
       type: 'localeString',
     },
     {
-      name: 'description',
-      title: 'Opis',
-      type: 'localeText',
-      deprecated: {
-        reason: 'Koristi polje “Opis (rich text editor)” kako bi imao Portable Text editor (prelamanje gdje želiš).',
-      },
-    },
-    {
       name: 'descriptionRich',
-      title: 'Opis (rich text editor)',
-      type: 'localeBlockContent',
+      title: 'Opis',
+      type: 'localeTeamBlockContent',
+      options: {
+        collapsible: false,
+      },
     },
     {
       name: 'category',

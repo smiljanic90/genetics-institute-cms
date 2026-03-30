@@ -21,6 +21,8 @@ import { galleryImage } from './objects/galleryImage';
 import { localeString } from './objects/localeString';
 import { localeText } from './objects/localeText';
 import { localeBlockContent } from './objects/localeBlockContent';
+import { teamBlockContent } from './objects/teamBlockContent';
+import { localeTeamBlockContent } from './objects/localeTeamBlockContent';
 import { partner } from './objects/partner';
 import { homeSection } from './objects/homeSection';
 import { navItem } from './objects/navItem';
@@ -69,6 +71,8 @@ export const schemaTypes = [
   localeString,
   localeText,
   localeBlockContent,
+  teamBlockContent,
+  localeTeamBlockContent,
   partner,
   homeSection,
   navItem,
