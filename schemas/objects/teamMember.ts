@@ -45,16 +45,29 @@ export const teamMember = {
       name: 'description',
       title: 'Opis',
       type: 'localeText',
+      deprecated: {
+        reason: 'Koristi polje “Opis (rich text editor)” kako bi imao Portable Text editor (prelamanje gdje želiš).',
+      },
+    },
+    {
+      name: 'descriptionRich',
+      title: 'Opis (rich text editor)',
+      type: 'localeBlockContent',
     },
     {
       name: 'category',
-      title: 'Kategorija / Oznaka',
-      type: 'string',
-      options: {
-        list: TEAM_CATEGORIES,
-        layout: 'dropdown',
-      },
-      validation: (Rule: { required: () => unknown }) => Rule.required(),
+      title: 'Kategorije / Oznake',
+      type: 'array',
+      of: [
+        {
+          type: 'string',
+          options: {
+            list: TEAM_CATEGORIES,
+            layout: 'tags',
+          },
+        },
+      ],
+      validation: (Rule: any) => Rule.required().min(1),
     },
   ],
   preview: {

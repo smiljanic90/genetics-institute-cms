@@ -4286,65 +4286,75 @@
           "collapsible": true,
           "collapsed": false
         },
+        "deprecated": {
+          "reason": "Koristi polje “Opis (rich text editor)” kako bi imao Portable Text editor (prelamanje gdje želiš)."
+        },
         "name": "description",
         "type": "localeText",
         "title": "Opis"
       },
       {
         "options": {
-          "list": [
-            {
-              "title": "Direktor",
-              "value": "direktor"
-            },
-            {
-              "title": "Naučno vijeće instituta",
-              "value": "naucno_vijece_instituta"
-            },
-            {
-              "title": "Administrativno osoblje",
-              "value": "administrativno_osoblje"
-            },
-            {
-              "title": "Spoljni saradnici",
-              "value": "spoljni_saradnici"
-            },
-            {
-              "title": "Tehničko osoblje",
-              "value": "tehnicko_osoblje"
-            },
-            {
-              "title": "Osoblje u naučnom i istraživačkom zvanju",
-              "value": "osoblje_u_naucnom_i_istrazivackom_zvanju"
-            }
-          ],
-          "layout": "dropdown"
+          "collapsible": true,
+          "collapsed": false
         },
+        "name": "descriptionRich",
+        "type": "localeBlockContent",
+        "title": "Opis (rich text editor)"
+      },
+      {
         "validation": [
           {
             "rules": [
               {
-                "flag": "valid",
-                "constraint": [
-                  "direktor",
-                  "naucno_vijece_instituta",
-                  "administrativno_osoblje",
-                  "spoljni_saradnici",
-                  "tehnicko_osoblje",
-                  "osoblje_u_naucnom_i_istrazivackom_zvanju"
-                ]
-              },
-              {
                 "flag": "presence",
                 "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 1
               }
             ],
             "level": "error"
           }
         ],
+        "of": [
+          {
+            "options": {
+              "list": [
+                {
+                  "title": "Direktor",
+                  "value": "direktor"
+                },
+                {
+                  "title": "Naučno vijeće instituta",
+                  "value": "naucno_vijece_instituta"
+                },
+                {
+                  "title": "Administrativno osoblje",
+                  "value": "administrativno_osoblje"
+                },
+                {
+                  "title": "Spoljni saradnici",
+                  "value": "spoljni_saradnici"
+                },
+                {
+                  "title": "Tehničko osoblje",
+                  "value": "tehnicko_osoblje"
+                },
+                {
+                  "title": "Osoblje u naučnom i istraživačkom zvanju",
+                  "value": "osoblje_u_naucnom_i_istrazivackom_zvanju"
+                }
+              ],
+              "layout": "tags"
+            },
+            "type": "string"
+          }
+        ],
         "name": "category",
-        "type": "string",
-        "title": "Kategorija / Oznaka"
+        "type": "array",
+        "title": "Kategorije / Oznake"
       }
     ],
     "name": "teamMember",
